@@ -170,6 +170,7 @@ class SmartFilamentSensor(octoprint.plugin.StartupPlugin,
     # Reset the distance, if the remaining distance is smaller than the new value
     def reset_distance (self, pPin):
         self._logger.debug("Motion sensor detected movement")
+        self.send_code = False
         if(self.remaining_distance < self.motion_sensor_detection_distance):
             self.remaining_distance = self.motion_sensor_detection_distance
 
