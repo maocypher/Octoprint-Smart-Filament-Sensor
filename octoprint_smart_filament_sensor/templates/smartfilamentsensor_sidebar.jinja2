@@ -1,9 +1,4 @@
 <div class="control-group">
-    <div class="controls" data-toggle="tooltip" title="{{ _('Enable or disble the sensor usage.') }}">
-      <label class="checkbox">
-        <input type="checkbox" data-bind="checked: settingsViewModel.settings.plugins.smartfilamentsensor.motion_sensor_enabled"> {{ _('Enable Sensor') }}
-      </label>
-    </div>   
     <div class="controls form-inline">
        <label class="control-label">{{ _('Sensor enabled:') }} <span data-bind="text: getSensorEnabledString()"></span></label>
     </div>
