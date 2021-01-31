@@ -72,7 +72,8 @@ class SmartFilamentSensor(octoprint.plugin.StartupPlugin,
 # Initialization methods
     def _setup_sensor(self):
         # Clean up before intializing again, because ports could already be in use
-        GPIO.cleanup()
+		# Uncomment if you want to force this plugin to perform a clean up. ! Warning this could mess up other GPIO assignments of other plugins !
+#       GPIO.cleanup()
 
         if(self.mode == 0):
             self._logger.info("Using Board Mode")
